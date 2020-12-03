@@ -9,5 +9,5 @@ The idea behind the creation of this project was to solve a problem I've had for
  - JavaScript
  - React
  - Node
- -PostgreSQL
+ - PostgreSQL
 
