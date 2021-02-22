@@ -39,8 +39,6 @@ router.post('/login', requireRegister, (req, res) => {
           message: `Welcome ${user.username}`,
           id: user.id,
           username: user.username,
-          firstName: user.firstName,
-          lastName: user.lastName,
           token: token,
         });
       } else {
