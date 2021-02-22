@@ -11,8 +11,11 @@ module.exports = {
       database: process.env.POSTGRES_DB,
       charset: 'utf8',
     },
-    migrations: { directory: './data/migrations' },
-    seeds: { directory: './data/seeds' },
+    migrations: {
+      directory: './database/migrations',
+      tableName: 'dbmigrations',
+    },
+    seeds: { directory: './database/seeds' },
     pool: {
       min: 2,
       max: 10,
@@ -31,7 +34,7 @@ module.exports = {
       max: 10,
     },
     migrations: {
-      tableName: 'knex_migrations',
+      tableName: 'dbmigrations',
     },
   },
 
@@ -42,7 +45,10 @@ module.exports = {
       min: 2,
       max: 10,
     },
-    migrations: { directory: './data/migrations' },
-    seeds: { directory: './data/seeds' },
+    migrations: {
+      directory: './database/migrations',
+      tableName: 'dbmigrations',
+    },
+    seeds: { directory: './database/seeds' },
   },
 };
