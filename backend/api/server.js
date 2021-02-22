@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
 
-server.use('/api/auth', authRouter);
+app.use('/api/auth', authRouter);
 
 app.get('/api', (req, res) => {
   res.status(200).json({ api: 'up' });
