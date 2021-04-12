@@ -14,7 +14,7 @@ exports.up = function (knex) {
       .onUpdate('CASCADE')
       .onDelete('CASCADE');
     employees.string('notes', 256);
-    employees.boolean('active').notNullable().defaultTo(true);
+    employees.boolean('active').defaultTo(true);
   });
 };
 
