@@ -21,8 +21,9 @@ exports.up = function (knex) {
     softwares.boolean('box').defaultTo(false);
     softwares.boolean('gsuite').defaultTo(false);
     softwares.boolean('gcp').defaultTo(false);
+    softwares.string('notes', 256);
     softwares
-      .integer('software_id')
+      .integer('employee_id')
       .unsigned()
       .notNullable()
       .references('employees.id')
