@@ -50,7 +50,7 @@ router.get('/:id', authenticate, async (req, res) => {
 });
 
 // UPDATE EMPLOYEE BY ID
-router.put('/update/:id', authenticate, async (req, res) => {
+router.put('/update/:id', authenticate, requireEmployee, async (req, res) => {
   try {
     const employee = await Employees.updateEmployee(req.params.id, req.body);
     if (employee) {

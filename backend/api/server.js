@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const authRouter = require('../routers/auth-router.js');
 const employeesRouter = require('../routers/employees-router.js');
 const computerRouter = require('../routers/computer-router.js');
+const softwaresRouter = require('../routers/softwares-router.js');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(cors());
 app.use('/api/auth', authRouter);
 app.use('/api/employees', employeesRouter);
 app.use('/api/computer', computerRouter);
+app.use('/api/softwares', softwaresRouter);
 
 app.get('/api', (req, res) => {
   res.status(200).json({ api: 'up' });
