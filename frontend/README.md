@@ -1,2 +1,1 @@
 # Asset-Management-Frontend
-# Testing
